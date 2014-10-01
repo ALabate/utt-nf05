@@ -16,7 +16,7 @@
 **/
 
 #include <stdio.h>
-#define PI 3.1416
+#define PI 3.1416 //Defintion de la constante
 
 int main(int argc, char const *argv[])
 {
@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
 
 
 	//Calcul du volume
-	B = PI * R * R;
+	B = PI * R * R; //Le PI sera remplacé avant la compilaton par 3.1416
 	V = B * H / 3;
 
 	//Sortie	

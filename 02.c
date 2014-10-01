@@ -32,38 +32,38 @@
     printf("_______________________\n\n");
 
     //Demande des valeurs
-	printf("%s\n", "Veuillez entrer un premier entier : a");
+	printf("Veuillez entrer un premier entier :\n");
 	scanf("%i", &a);
-	printf("%s\n", "Veuillez entrer un second entier : b");
+	printf("Veuillez entrer un second entier :\n");
 	scanf("%i", &b);
     printf("_______________________\n");
 
 	//Affichage de a et b
-	printf("%s%i\n", "a = ", a);
-	printf("%s%i\n", "b = ", b);	
+	printf("a = %i\n", a);
+	printf("b = %i\n", b);	
 
 	//Somme
 	res = a + b;
-	printf("%s%i\n", "a + b = ", res);
+	printf("a + b = %i\n", res);
 
 	//Différence
 	res = a - b;
-	printf("%s%i\n", "a - b = ", res);
+	printf("a - b = %i\n", res);
 
 	//Produit
 	res = a * b;
-	printf("%s%i\n", "a * b = ", res);
+	printf("a * b = %i\n", res);
 
 	//Quotient
 	res = a / b;
-	printf("%s%i\n", "a / b = ", res);
+	printf("a / b = %i\n", res);
 
 	//Reste
 	res = a % b;
-	printf("%s%i\n", "a % b = ", res);
+	printf("a %% b = %i\n", res);
 
 	//Observations
-	printf("%s\n", "\nOn remarque que le resultat sera toujours un entier lors d'une opération entre deux entiers. Le resultats de la division est donc uniquement la partie entière");
+	printf("\nOn remarque que le resultat sera toujours un entier lors d'une opération entre deux entiers. Le resultats de la division est donc uniquement la partie entière\n");
 }
 
 void question2() {
@@ -73,29 +73,29 @@ void question2() {
 
 
     //Présentation partie 1
-    printf("\n\nNF05 - TP1 - Exercice 2 - Question 2 - Réels\n");
-    printf("_______________________\n");
+    printf("\n\nNF05 - TP1 - Exercice 2 - Question 2 - Réels\n"); //printf sert à afficher du texte
+    printf("_______________________\n"); //Les \n permettent de faire des retour à la ligne
 
     //Demande des valeurs
-	printf("%s\n", "Veuillez entrer un premier réel : a");
-	scanf("%f", &a);
-	printf("%s\n", "Veuillez entrer un second réel : b");
+	printf("Veuillez entrer un premier réel :\n");
+	scanf("%f", &a); //scanf permet de saisir une valeur dans la console; %f indique que la valeur sera un réel
+	printf("Veuillez entrer un second réel :\n");
 	scanf("%f", &b);
     printf("_______________________\n");
 
 	//Affichage de a et b
-	printf("%s%f\n", "a = ", a);
-	printf("%s%f\n", "b = ", b);	
+	printf("a = %f\n", a);
+	printf("b = %f\n", b);	
 
-	//Permutation des variables
+	//Permutation des variables. Elle implique forcément une variable temporaire supplémentaire.
     printf("Permutation des réels\n");
 	tmp = a;
 	a = b;
 	b = tmp;
 
 	//Affichage de a et b
-	printf("%s%f\n", "a = ", a);
-	printf("%s%f\n", "b = ", b);
+	printf("a = %f\n", a);
+	printf("b = %f\n", b);
 
 
     //Presentation partie 2
@@ -103,16 +103,16 @@ void question2() {
     printf("_______________________\n");
 
     //Demande des valeurs
-	printf("%s\n", "Veuillez entrer un premier caractère : c");
-	scanf(" %c", &c);
-	printf("%s\n", "Veuillez entrer un second caractère : d");
+	printf("Veuillez entrer un premier caractère :\n");
+	scanf(" %c", &c); //On demande à l'utilisateur d'entrer un caractère symbolisé par le %c. L'espace avant le %c permet d'enlever un eventuel retour à la ligne qui serait resté dans la mémoire d'entrée
+	printf("Veuillez entrer un second caractère :\n");
 	scanf(" %c", &d);
     printf("_______________________\n");
 
 
 	//Affichage de c et d
-	printf("%s%c\n", "c = ", c);
-	printf("%s%c\n", "d = ", d);	
+	printf("c = %c\n", c);
+	printf("d = %c\n", d);	
 
 	//Permutation des variables
     printf("Permutation des caractères\n");
@@ -120,9 +120,9 @@ void question2() {
 	c = d;
 	d = tmpc;
 
-	//Affichage de a et b
-	printf("%s%c\n", "c = ", c);
-	printf("%s%c\n", "d = ", d);
+	//Affichage de c et d
+	printf("c = %c\n", c);
+	printf("d = %c\n", d);
 }
 
 void question3() {
@@ -135,26 +135,26 @@ void question3() {
     printf("_______________________\n");
 
     //Demande des valeurs
-	printf("%s\n", "Veuillez entrer un premier caractère : a");
+	printf("Veuillez entrer un premier caractère :\n");
 	scanf(" %c", &a);
-	printf("%s\n", "Veuillez entrer un second caractère : b");
+	printf("Veuillez entrer un second caractère :\n");
 	scanf(" %c", &b);
     printf("_______________________\n");
 
 	//Affichage de a et b
-	printf("%s%c\n", "a = ", a);
-	printf("%s%c\n", "b = ", b);
+	printf("a = %c\n", a);
+	printf("b = %c\n", b);
 
 	//Calcul de la somme et de la différence
-	printf("%s%c\n", "a + b = ", a + b);
-	printf("%s%c\n", "a - b = ", a - b);
+	printf("a + b = '%c'\n", a + b);
+	printf("a - b = '%c'\n", a - b);
 
 	//Interprétation des résultats
-	printf("%s%c%s%i\n", "La valeur numérique de '", a, "' est ", a);
-	printf("%s%c%s%i\n", "La valeur numérique de '", b, "' est ", b);
-	printf("%s%c%s%i\n", "La valeur numérique de '", (a + b), "' est ", (a + b));
-	printf("%s%c%s%i\n", "La valeur numérique de '", (a - b), "' est ", (a - b));
-	printf("%s\n", "La sommes ou la différence de deux caractères est juste celles des valeurs entières associées. Se référer à la table ASCII afin de savoir les caractères associés aux codes.");
+	printf("La valeur numérique de '%c' est %i\n", a, a);
+	printf("La valeur numérique de '%c' est %i\n", b, b);
+	printf("La valeur numérique de '%c' est %i\n", (a + b), (a + b));
+	printf("La valeur numérique de '%c' est %i\n", (a - b), (a - b));
+	printf("La sommes ou la différence de deux caractères est juste celles des valeurs entières associées. Se référer à la table ASCII afin de savoir les caractères associés aux codes.\n");
 
 }
 

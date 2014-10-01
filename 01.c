@@ -20,24 +20,25 @@ int main(int argc, char const *argv[])
     float a;
 
     //Présentation
-    printf("NF05 - TP1 - Exercice 1\n");
-    printf("_______________________\n\n");
+    printf("NF05 - TP1 - Exercice 1\n"); //printf sert à afficher du texte
+    printf("_______________________\n\n"); //Les \n permettent de faire des retour à la ligne
 
-    //Affichage des taille des types en octets 
-    //sizeof donne la valeur dans un int, et printf l'affiche
-    printf("Taille int : %d\n", sizeof(int));
-    printf("Taille short : %d\n", sizeof(short));
-    printf("Taille char : %d\n", sizeof(char));
+    //Affichage des taille des types en octets
+    printf("Taille int : %d\n", sizeof(int)); //sizeof donne la valeur dans un int
+    printf("Taille short : %d\n", sizeof(short)); //Et printf l'affiche à l'emplacement où %d est mis
+    printf("Taille char : %d\n", sizeof(char)); //%d indique que la valeur est un entier
     printf("Taille float : %d\n", sizeof(float));
     printf("Taille double : %d\n", sizeof(double));
     printf("Taille long double : %d\n", sizeof(long double));
 
     printf("_______________________\n\n");
 
+
+  
     a=3.4;
-    ptr=&a;
+    ptr=&a; // Assigne l'adresse de a au pointeur
     //La valeur sera la même que a car ptr pointe vers &a
-    printf("la valeur contenue dans l’adresse est %1.2f \n", *ptr);
+    printf("la valeur contenue dans l’adresse est %1.2f \n", *ptr); //%1.2f indique que la valeur est un réel qui sera arrondie à deux chiffres après la virgule
     //les deux adresses seront donc les mêmes
     printf("l’adresse est %d \n", ptr) ;
     printf("l’adresse de a est %d \n", &a) ;
