@@ -11,45 +11,59 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
+
+
+void decToOct(int entree, char* sortie) {
+
+	char temp[32];
+	int chiffre, i, longueur;
+
+
+	i = 0;
+	while(entree > 0) {
+		//Récupération du chiffre de poid le plus faible
+		chiffre = entree % 8;
+
+		//Retire le chiffre de poid le plus faible
+		entree = entree / 8;
+
+		//Ajout du chiffre au string (mais en inversé il faudra réinversé ensuite)
+		temp[i] = '0' + chiffre;
+
+		i++;
+	}
+	longueur = i - 1;
+
+	//Inversion afin d'avoir le nombre dans le bon sens
+	for(i = 0; i<=longueur; i++) {
+		sortie[i] = temp[longueur-i];
+	}
+
+	//Ajout du caractère 0 pour montrer que la chaine est terminée
+	sortie[longueur + 1] = 0;
+}
 
 int main(int argc, char const *argv[])
 {
 
 	//Init des variables
-	int oct;
-	int poid = 0;
-	int chiffre;
-	int result = 0;
+	char sortie[32];
+	long entree = 0;
 
 	//Presentation
-    printf("NF05 - TP1 - Exercice 6\n");
+    printf("NF05 - TP2 - Exercice 6\n");
     printf("_______________________\n\n");
 
     //Demande des valeurs
-	printf("%s\n", "Veuillez entrer la valeur octale à convertir :");
-	scanf("%i", &oct);
+	printf("%s\n", "Veuillez entrer la valeur décimale à convertir en octale (inférieur à 32 bits) :");
+	scanf("%d", &entree);
 
-	while(oct > 0) {
-		//Recuperation du chiffre octale de poid le plus faible
-		chiffre = oct % 10;
+	//Récupération du résultat
+	decToOct(entree, sortie);
 
-		//Gestion d'erreur
-		if(chiffre > 7) {
-			printf("%s\n", "Ce nombre n'est pas octale");
-			return 1;
-		}
-
-
-		//Suppression du chiffre octale de poid le plus petit
-		oct = (oct - chiffre) / 10;
-
-		//Ajout de la valeur du chiffre ne decimal
-		result += chiffre * ((int)pow(8, poid));
-
-		poid++;
-	}
-
-	printf("%s%i\n", "La valeur en decimal est : ", result);
+	//Affichage
+	printf("%s%s\n", "La valeur en octale est : ", sortie);
 
 
     return 0;
