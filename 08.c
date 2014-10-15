@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 	float C = 6.5;
 
     //Présentation
-    printf("NF05 - TP1 - Exercice 8\n");
+    printf("NF05 - TP2 - Exercice 8\n");
     printf("_______________________\n\n");
 
 
@@ -48,13 +48,13 @@ int main(int argc, char const *argv[])
 	// Decale A de B bits sur la gauche
 	// ici decale 65425 (ou 1111111110010001) de 2 bits sur la gauche
 	// donc C=111111111001000100 donc 261700 en float
-	C = (int)(A<<B);
+	C = (float)(A<<B);
 	printf("%f\n", C);
 
 	// Fait le ET logique entre A et C
 	// ici (65425 et 261700) ou (1111111110010001 et 111111111001000100)
 	// donc 1111111000000000 ou A=65024
-	A = A&(int)C;
+	A = A&(unsigned short)C;
 	printf("%i\n", A);
 
 

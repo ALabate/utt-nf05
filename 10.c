@@ -11,7 +11,7 @@
 **/
 
 #include <stdio.h>
-
+ 
 /**
  * Teste si un nombre est premier ou non (donnée dans le cours)
  * @param	n Nombre à tester
@@ -19,7 +19,7 @@
  */
 int premier( int n )
 {
-	if (n ==2) return 1;
+	if (n == 2) return 1;
 	else
 	{
 		int k =2; int z =1;
@@ -38,6 +38,12 @@ int main(int argc, char const *argv[])
 {
 	//init
 	int i;
+
+
+    //Présentation
+    printf("NF05 - TP3 - Exercice 10\n");
+    printf("_______________________\n\n");
+
 	//Cherche un par un si tous les nombres sont premiers
 	printf("2\n");
 	for (i =3; i <=50; i+=2)
