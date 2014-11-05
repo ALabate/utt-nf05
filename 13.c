@@ -4,7 +4,7 @@
  * UV : NF05
  *
  * Enoncé : 
- * Ecrire un programme qui calcule la moyenne et la variance de N ŕeels saisis 
+ * Ecrire un programme qui calcule la moyenne et la variance de N réels saisis 
  * au clavier (sans utiliser de tableau).
  *
 **/
