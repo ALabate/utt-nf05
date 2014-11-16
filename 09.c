@@ -4,7 +4,7 @@
  * UV : NF05
  *
  * Enoncé : 
- * Ecrire un programme qui résout une  équation du second degrée.
+ * Ecrire un programme qui résout une équation du second degrée.
  *
 **/
 
