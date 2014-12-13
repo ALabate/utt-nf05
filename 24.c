@@ -74,6 +74,9 @@ int main(int argc, char const *argv[])
     char c;
     FILE *f;
 
+    printf("NF05 - TP7 - Exercice 24\n");
+    printf("_______________________\n\n");
+
     //Saisie
     printf("=== Saisie de la base de livre ===\n");
     nbrLivres = saisieBaseLivre(&liste);
