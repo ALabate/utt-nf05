@@ -5,7 +5,6 @@
  *
  * Enoncé :
  * Ecrire une fonction qui calcule le pgcd (plus grand commun diviseur)
- * et qui donne le nombre d'opérations d'échange lors du tri
 **/
 
 
